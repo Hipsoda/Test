@@ -57,3 +57,41 @@ all relevant files stored in the server will get lost
     `git branch -d <branchname>` This will delete the bracnch
 
 ### HEAD
+    HEAD is the commit number of the most recent committed file, and it is stored in hte .git/HEAD, and it is in constantly
+    change, now I will list several usage of HEAD
+1. difftool
+    a. `git difftool <older  commitnumber1> <new commitnumber2>`
+    b. `git difftool HEAD~1 HEAD~2`
+
+2. detached HEAD
+    in not main branch, you can checkout to older state, in this condition, HEAD becomes detached HEAD, it doesn't show 
+    the latest commitcode
+
+### .gitignore file
+    You may be have some file and not want to commit it to the vcs, and you can create a gitignore file and puts the file name into it 
+1. Create gitignore file
+    `touch .gitignore`
+
+2. Put the name you ignore into the gitnore file
+    Copy-Paste
+3. commit the .gitignore file
+
+### Diff and Merge by using meld
+    Meld is a tool for user. It provides good-looking using for difftool insetead of vim and it is convenient ot merge
+    modified file if you modify the file both locally and in GitHub
+
+1. You get the latest code version from github by using 
+    `git pull`  
+
+
+### Pull Request
+    I will just describe the process of using Pull Request.
+    Now we have two persons(A, B), and A is the owner of a repo, B is a active coder.
+1. B fork the repo to his own repo, and modify relevant files
+2. B pull request
+3. A check the modified file and make comments
+4. B revise the file
+5. Repeat
+6. A accept the pull request and merge the modified file to certain branch 
+
+
